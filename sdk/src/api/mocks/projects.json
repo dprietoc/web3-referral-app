@@ -1,0 +1,49 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "apiKey": "123-456-789",
+      "name": "CryptoArt Gallery",
+      "description": "An exclusive collection of digital art pieces from top NFT artists around the world.",
+      "logoUrl": "https://miro.medium.com/v2/1*RJ_LEZQIhAcir1_AT8Go9A@2x.jpeg",
+      "referralReward": "Earn 5% commission on every referred purchase",
+      "incentives": [
+        "Exclusive access to private art auctions",
+        "Early access to new art drops",
+        "VIP membership for top referrers"
+      ],
+      "primaryColor": "#FFD700",
+      "secondaryColor": "#000000"
+    },
+    {
+      "id": "2",
+      "apiKey": "234-567-891",
+      "name": "GameVerse",
+      "description": "A decentralized gaming platform where players can buy, sell, and trade in-game assets as NFTs.",
+      "logoUrl": "https://seeklogo.com/images/G/gameverse-logo-BAAEC0BA8E-seeklogo.com.png",
+      "referralReward": "Get 10% off in-game purchases for every friend who signs up",
+      "incentives": [
+        "Special items for early referrers",
+        "Access to beta versions of new games",
+        "Invite-only gaming tournaments"
+      ],
+      "primaryColor": "#FF4500",
+      "secondaryColor": "#CC28F5"
+    },
+    {
+      "id": "3",
+      "apiKey": "345-678-912",
+      "name": "MusicBeats",
+      "description": "A platform for music lovers to collect limited-edition music tracks and album art NFTs.",
+      "logoUrl": "https://cdn.vectorstock.com/i/preview-1x/40/26/music-logo-design-note-emblem-for-corporate-vector-29104026.jpg",
+      "referralReward": "Earn a free track for every 3 friends who sign up",
+      "incentives": [
+        "Discounted concert tickets for top referrers",
+        "Limited-edition vinyl releases",
+        "Access to private listening parties"
+      ],
+      "primaryColor": "#00BFFF",
+      "secondaryColor": "#00008B"
+    }
+  ]
+}

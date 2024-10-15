@@ -1,3 +1,4 @@
+import Fuul from "fuul-sdk";
 import { useState } from "react";
 import { connectWallet } from "../services/WalletService";
 
@@ -8,6 +9,14 @@ const WalletButton: React.FC = () => {
     const {address} = await connectWallet();
     if (address) {
       setAddress(address);
+      getProject();
+    }
+  };
+
+  const getProject = async () => {
+    const project = await Fuul.init('123-456-789');
+    if (project) {
+      console.log(project);
     }
   };
 
