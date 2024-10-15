@@ -9,3 +9,5 @@ export interface NFT {
   maxSupply: number;
   currentSupply: number;
 }
+
+export type UserMints = Record<string, number>;
