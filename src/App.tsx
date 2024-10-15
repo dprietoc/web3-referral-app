@@ -1,5 +1,6 @@
 import WalletButton from './components/WalletButton/WalletButton';
-import { Web3Provider } from './contexts/Web3Context';
+import NFTList from './components/NFTList/NFTList';
+import { useWeb3Context, Web3Provider } from './contexts/Web3Context';
 import './App.css'
 
 const App = () => (
@@ -9,9 +10,11 @@ const App = () => (
 );
 
 const MainApp = () => {
+  const { address } = useWeb3Context();
   return (
     <>
       <WalletButton />
+      <NFTList address={address} />
     </>
   )
 }
