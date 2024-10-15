@@ -1,8 +1,11 @@
-import './App.css'
 import WalletButton from './components/WalletButton/WalletButton';
+import { Web3Provider } from './contexts/Web3Context';
+import './App.css'
 
 const App = () => (
-  <MainApp />
+  <Web3Provider>
+    <MainApp />
+  </Web3Provider>
 );
 
 const MainApp = () => {
