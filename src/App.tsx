@@ -1,5 +1,5 @@
 import './App.css'
-import WalletButton from './components/WalletButton';
+import WalletButton from './components/WalletButton/WalletButton';
 
 const App = () => (
   <MainApp />

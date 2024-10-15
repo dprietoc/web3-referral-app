@@ -1,7 +1,8 @@
 import Fuul from "fuul-sdk";
 import { Project } from "fuul-sdk/dist/types";
 import { useState } from "react";
-import { connectWallet } from "../services/WalletService";
+import { connectWallet } from "../../services/WalletService";
+import styles from './WalletButton.module.scss';
 
 const apiKey = import.meta.env.VITE_PROJECT_API_KEY;
 
@@ -25,8 +26,8 @@ const WalletButton: React.FC = () => {
   };
 
   return (
-    <div style={{ marginTop: '20px', textAlign: 'right' }}>
-      <button onClick={connectMyWallet} style={{ maxWidth: '300px', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+    <div className={styles.walletContainer}>
+      <button onClick={connectMyWallet}>
         {address ? `Connected: ${address}` : 'Connect Wallet'}
       </button>
       {project && <pre>{JSON.stringify(project)}</pre>}

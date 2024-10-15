@@ -1,0 +1,38 @@
+.walletContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+
+  button {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+
+  pre {
+    margin-top: 16px;
+    text-align: left;
+    background-color: #e8e8e8;
+    padding: 8px;
+    color:#007bff;
+    text-wrap: wrap;
+    border-radius: 4px;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
