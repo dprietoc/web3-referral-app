@@ -134,6 +134,15 @@
       "imageUrl": "https://i.pinimg.com/236x/6e/41/1d/6e411d8f3d574ff8b8bbd063c6fdf6a4.jpg",
       "maxSupply": 200,
       "currentSupply": 100
+    },
+    {
+      "id": "nft16",
+      "name": "Digital Art Piece #3",
+      "category": "Art",
+      "description": "A futuristic art piece representing the digital age.",
+      "imageUrl": "https://i.pinimg.com/236x/7c/1d/17/7c1d17145fcd2ad8d2c29fd7d59dc5b6.jpg",
+      "maxSupply": 120,
+      "currentSupply": 80
     }
   ]  
 }

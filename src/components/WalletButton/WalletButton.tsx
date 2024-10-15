@@ -1,14 +1,12 @@
 import Fuul from "fuul-sdk";
-import { Project } from "fuul-sdk/dist/types";
-import { useState } from "react";
 import { connectWallet } from "../../services/WalletService";
 import styles from './WalletButton.module.scss';
+import { useWeb3Context } from "../../contexts/Web3Context";
 
 const apiKey = import.meta.env.VITE_PROJECT_API_KEY;
 
 const WalletButton: React.FC = () => {
-  const [address, setAddress] = useState<string>('');
-  const [project, setProject] = useState<Project | null>(null);
+  const { address, setAddress, setProject} = useWeb3Context();
 
   const connectMyWallet = async () => {
     const {address} = await connectWallet();
@@ -22,6 +20,7 @@ const WalletButton: React.FC = () => {
     const project = await Fuul.init(apiKey);
     if (project) {
       setProject(project);
+      console.log(project);
     }
   };
 
@@ -30,7 +29,6 @@ const WalletButton: React.FC = () => {
       <button onClick={connectMyWallet}>
         {address ? `Connected: ${address}` : 'Connect Wallet'}
       </button>
-      {project && <pre>{JSON.stringify(project)}</pre>}
     </div>
   );
 };
