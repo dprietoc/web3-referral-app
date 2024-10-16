@@ -1,7 +1,7 @@
 import Fuul from "fuul-sdk";
-import { connectWallet } from "../../services/WalletService";
 import styles from './WalletButton.module.scss';
 import { useWeb3Context } from "../../contexts/Web3Context";
+import { connectWallet } from "../../services/WalletService";
 
 const apiKey = import.meta.env.VITE_PROJECT_API_KEY;
 
