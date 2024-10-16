@@ -1,4 +1,4 @@
-import ModalProvider, { useModalContext } from "../../contexts/ModalContext";
+import ModalProvider from "../../contexts/ModalContext";
 import { useWeb3Context, Web3Provider } from "../../contexts/Web3Context";
 import NFTList from "../NFTList/NFTList";
 import ReferralModal from "../referralModal/ReferralModal";
@@ -14,7 +14,6 @@ const App = () => (
 );
 
 const MainApp = () => {
-  const { showModal, setShowModal } = useModalContext();
   const { address, project } = useWeb3Context();
 
   return (
@@ -24,11 +23,7 @@ const MainApp = () => {
         <WalletButton />
       </header>
       <NFTList address={address} maxMintsCategory={2} />
-      <ReferralModal
-        walletAddress={address}
-        project={project}
-        isOpen={showModal}
-        onClose={() => setShowModal(false)}
+      <ReferralModal walletAddress={address} project={project}
       />
     </>
   );
