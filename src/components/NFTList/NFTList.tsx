@@ -4,6 +4,7 @@ import { getTokens } from "../../services/NFTQueryService";
 import { mintNFT } from "../../services/NFTMintingService";
 import { NFT, UserMints } from "../../types";
 import styles from "./NFTList.module.scss";
+import Card from "../../system/card/Card";
 
 type NFTListProps = {
   address: string | null;
@@ -56,28 +57,15 @@ const NFTList = ({ address, maxMintsCategory = 1 }: NFTListProps) => {
           {nfts.map((nft) => {
             const eligible = checkMintAvailability(nft);
             return (
-              <li key={nft.id} className={styles.nftItem}>
-                <h3>{`${nft.name} (${nft.category})`}</h3>
-                <img
-                  className={styles.nftImage}
-                  src={nft.imageUrl}
-                  alt={`${nft.name}`}
-                />
-                <div className={styles.nftDetails}>
-                  {`Editions: ${nft.currentSupply}/${nft.maxSupply}`}
-                </div>
-                {eligible ? (
-                  <button
-                    className={styles.mintButton}
-                    onClick={() => onMintPressed(nft)}
-                    disabled={!address}
-                  >
-                    Mint NFT
-                  </button>
-                ) : (
-                  <span>Limit Reached</span>
-                )}
-              </li>
+              <Card key={nft.id} 
+                imageSrc={nft.imageUrl}
+                title={nft.name}
+                category={nft.category}
+                editions={`${nft.currentSupply}/${nft.maxSupply}`}
+                buttonText={eligible ? "Mint NFT" : "Limit Reached"}
+                onButtonClick={() => onMintPressed(nft)}
+                disabled={!address || !eligible}
+              />
             );
           })}
         </ul>
