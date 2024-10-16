@@ -31,6 +31,11 @@ const ReferralModal: React.FC<ReferralModalProps> = ({
     setLinkCopied(true);
   }
 
+  const onCloseButton = () => {
+    setLinkCopied(false);
+    onClose();
+  }
+
   return (
     <div className={styles.modalOverlay}>
       <div
@@ -40,7 +45,9 @@ const ReferralModal: React.FC<ReferralModalProps> = ({
           color: project.secondaryColor,
         }}
       >
-        <button className={styles.closeButton} onClick={onClose}>
+        <button className={styles.closeButton} 
+          style={{color: project.primaryColor}}
+          onClick={onCloseButton} title="close modal">
           X
         </button>
         <header>

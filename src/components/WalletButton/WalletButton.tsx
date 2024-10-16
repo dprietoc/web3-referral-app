@@ -27,7 +27,7 @@ const WalletButton: React.FC = () => {
   return (
     <div className={styles.walletContainer}>
       <button onClick={connectMyWallet}>
-        {address ? `Connected: ${address}` : 'Connect Wallet'}
+        {address ? `🟢 Connected: ${address}` : ' 🔌  Connect Wallet'}
       </button>
     </div>
   );

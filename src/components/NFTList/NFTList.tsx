@@ -37,11 +37,22 @@ const NFTList = ({ address, maxMintsCategory = 1 }: NFTListProps) => {
     const { success, error } = await mintNFT(nft);
     if (success) {
       updateUserMints(nft.category);
+      updateNFTSupply(nft);
       setShowModal(true);
     } else {
       console.log("Mint error: ", error);
     }
   };
+
+  const updateNFTSupply = (nft: NFT) => {
+    setNFTs((prevNFTs) => 
+      prevNFTs.map((prevNFT) => 
+        prevNFT.id === nft.id 
+          ? { ...prevNFT, currentSupply: prevNFT.currentSupply++ } 
+          : prevNFT
+      )
+    );
+  }
 
   const updateUserMints = (category: string) => {
     setUserMints((prevMints) => ({
