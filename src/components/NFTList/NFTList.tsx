@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import { useModalContext } from "../../contexts/ModalContext";
 import { getTokens } from "../../services/NFTQueryService";
+import { mintNFT } from "../../services/NFTMintingService";
 import { NFT, UserMints } from "../../types";
 import styles from "./NFTList.module.scss";
-import { mintNFT } from "../../services/NFTMintingService";
 
 type NFTListProps = {
   address: string | null;
@@ -12,6 +13,7 @@ type NFTListProps = {
 const NFTList = ({ address, maxMintsCategory = 1 }: NFTListProps) => {
   const [nfts, setNFTs] = useState<NFT[]>([]);
   const [userMints, setUserMints] = useState<UserMints>({});
+  const { setShowModal } = useModalContext();
 
   useEffect(() => {
     getNFTs();
@@ -34,7 +36,7 @@ const NFTList = ({ address, maxMintsCategory = 1 }: NFTListProps) => {
     const { success, error } = await mintNFT(nft);
     if (success) {
       updateUserMints(nft.category);
-      alert(`${nft.name} minted by ${address}!`);
+      setShowModal(true);
     } else {
       console.log("Mint error: ", error);
     }
