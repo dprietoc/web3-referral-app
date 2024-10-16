@@ -1,10 +1,11 @@
+import '@testing-library/jest-dom';
 import { render, fireEvent } from '@testing-library/react';
 import Button from './Button';
 
 describe('Button component', () => {
   it('renders correctly', () => {
     const { getByText } = render(<Button onClick={() => {}}>Click me</Button>);
-    expect(getByText('Click me')).toBeDefined();
+    expect(getByText('Click me')).toBeInTheDocument();
   });
 
   it('calls onClick handler when clicked', () => {
