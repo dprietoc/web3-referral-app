@@ -1,8 +1,8 @@
-import ModalProvider from "../../contexts/ModalContext";
-import { useWeb3Context, Web3Provider } from "../../contexts/Web3Context";
-import NFTList from "../NFTList/NFTList";
-import ReferralModal from "../referralModal/ReferralModal";
-import WalletButton from "../walletButton/WalletButton";
+import ModalProvider from "../contexts/ModalContext";
+import { useWeb3Context, Web3Provider } from "../contexts/Web3Context";
+import NFTList from "./NFTList/NFTList";
+import ReferralModal from "./referralModal/ReferralModal";
+import WalletButton from "./walletButton/WalletButton";
 import "./App.scss";
 
 const App = () => (
