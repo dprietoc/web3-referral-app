@@ -13,8 +13,9 @@ const MainApp = () => {
   const { address } = useWeb3Context();
   return (
     <>
+      <h1>Web3 Referral App</h1>
       <WalletButton />
-      <NFTList address={address} />
+      <NFTList address={address} maxMintsCategory={2}/>
     </>
   )
 }
