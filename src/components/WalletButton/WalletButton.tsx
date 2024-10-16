@@ -1,8 +1,9 @@
-import Fuul from "fuul-sdk";
-import styles from './WalletButton.module.scss';
-import { useWeb3Context } from "../../contexts/Web3Context";
-import { addWalletListener, ConnectWalletResponse, EthereumMethod, requestWallet } from "../../services/WalletService";
 import { useEffect } from "react";
+import { useWeb3Context } from "../../contexts/Web3Context";
+import Fuul from "fuul-sdk";
+import Button from "../../system/button/Button";
+import { addWalletListener, ConnectWalletResponse, EthereumMethod, requestWallet } from "../../services/WalletService";
+import styles from './WalletButton.module.scss';
 
 const apiKey = import.meta.env.VITE_PROJECT_API_KEY;
 
@@ -46,9 +47,9 @@ const WalletButton: React.FC = () => {
   return (
     <div className={styles.walletContainer}>
       {!address && <p>{walletStatus}</p>}
-      <button onClick={connectMyWallet}>
+      <Button onClick={connectMyWallet}>
         {address ? `🟢 Connected: ${address}` : '🦊 Connect Wallet'}
-      </button>
+      </Button>
     </div>
   );
 };
