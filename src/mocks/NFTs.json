@@ -1,0 +1,148 @@
+{ 
+  "nfts": [
+    {
+      "id": "nft1",
+      "name": "Digital Art Piece #1",
+      "category": "Art",
+      "description": "A unique digital art piece by a renowned artist.",
+      "imageUrl": "https://cdn.nftshowroom.com/bafybeidrwsttfzgonpw5u2ycpemsz7w5sk3w35r53nl55la6w3a3xplaue.png",
+      "maxSupply": 10,
+      "currentSupply": 8
+    },
+    {
+      "id": "nft2",
+      "name": "Digital Art Piece #2",
+      "category": "Art",
+      "description": "An abstract digital artwork representing modern themes.",
+      "imageUrl": "https://cdn.nftshowroom.com/bafybeicc6emaokv2qxthma3rmehmv6zrwwerl2bb7ilvzbdonkbg2rh5gq.jpg",
+      "maxSupply": 50,
+      "currentSupply": 30
+    },
+    {
+      "id": "nft3",
+      "name": "Virtual Sculpture #1",
+      "category": "Art",
+      "description": "A digital sculpture crafted with intricate details.",
+      "imageUrl": "https://cdn.nftshowroom.com/bafybeiepn7a6fkmcjl32szzpnwzeu43aya6ft7z72rht7omcy35khnzwvm.png",
+      "maxSupply": 5,
+      "currentSupply": 4
+    },
+    {
+      "id": "nft4",
+      "name": "Gaming Collectible #1",
+      "category": "Gaming",
+      "description": "A rare collectible from a popular RPG game.",
+      "imageUrl": "https://cdn.nftshowroom.com/bafybeif32gi2wfswxppg4lzbuumnyylazx4hi6nmwaxc2tddmfqqejtmoe.jpg",
+      "maxSupply": 20,
+      "currentSupply": 18
+    },
+    {
+      "id": "nft5",
+      "name": "Gaming Avatar Skin #1",
+      "category": "Gaming",
+      "description": "An exclusive avatar skin for a first-person shooter game.",
+      "imageUrl": "https://cdn.nftshowroom.com/bafybeif7gock3p4qn55zwsi23balw7f4lxazskzubcwsvu4nq6f5zxttcu.jpg",
+      "maxSupply": 15,
+      "currentSupply": 8
+    },
+    {
+      "id": "nft6",
+      "name": "Gaming Weapon #1",
+      "category": "Gaming",
+      "description": "A legendary in-game weapon with unique abilities.",
+      "imageUrl": "https://cdn.nftshowroom.com/bafybeihmtce6ugkhfdukad5zcm7qwyge6zhfy6iplnj6z6x7edly642z3i.jpg",
+      "maxSupply": 3,
+      "currentSupply": 3
+    },
+    {
+      "id": "nft7",
+      "name": "Gaming Collectible #2",
+      "category": "Gaming",
+      "description": "A collectible card from a famous trading card game.",
+      "imageUrl": "https://cdn.nftshowroom.com/bafkreib773r2cdj7ml45lnp5k77gudk2eorssmrimsjjk6auytnn2mkxdm.png",
+      "maxSupply": 5,
+      "currentSupply": 3
+    },
+    {
+      "id": "nft8",
+      "name": "Music Album Cover #1",
+      "category": "Music",
+      "description": "A limited edition NFT of a famous album cover.",
+      "imageUrl": "https://cdn.nftshowroom.com/bafybeia3sqk45sww6tswvyodl4chahwgwuvz4mvwpasahziua4bvd2h2ei.jpg",
+      "maxSupply": 10,
+      "currentSupply": 4
+    },
+    {
+      "id": "nft9",
+      "name": "Music Track #1",
+      "category": "Music",
+      "description": "An exclusive digital release of a popular track.",
+      "imageUrl": "https://cdn.nftshowroom.com/bafybeiewywes52pwumtcz64x2lswmcmqqddlt6l4c6v7wmlu32rppkseq4.png",
+      "maxSupply": 10,
+      "currentSupply": 6
+    },
+    {
+      "id": "nft10",
+      "name": "Music Festival Ticket #1",
+      "category": "Music",
+      "description": "A virtual ticket for an upcoming music festival.",
+      "imageUrl": "https://cdn.nftshowroom.com/bafybeiepgfdxqx3s6fth2qc5nc4itkozlx4efyrjf7mhnfaujrwnoa5gxu.png",
+      "maxSupply": 5,
+      "currentSupply": 3
+    },
+    {
+      "id": "nft11",
+      "name": "Music Collectible #1",
+      "category": "Music",
+      "description": "A digital collectible of a famous musician's memorabilia.",
+      "imageUrl": "https://cdn.nftshowroom.com/bafybeifnosk7rtx4kskxbybxguaoa7xcg2fkoek4q3nflfi6smji2vpqii.jpg",
+      "maxSupply": 25,
+      "currentSupply": 22
+    },
+    {
+      "id": "nft12",
+      "name": "Sports Trading Card #1",
+      "category": "Sports",
+      "description": "A digital trading card of a legendary athlete.",
+      "imageUrl": "https://cdn.nftshowroom.com/bafybeieredkhpru4w6v3wad7cscfzftingksxnv7lrgmid4trjq2t5pami.gif",
+      "maxSupply": 30,
+      "currentSupply": 15
+    },
+    {
+      "id": "nft13",
+      "name": "Sports Event Ticket #1",
+      "category": "Sports",
+      "description": "An exclusive NFT ticket for an upcoming sports event.",
+      "imageUrl": "https://cdn.nftshowroom.com/bafybeibwarlols43m6whu3mxcbf4begam3wfatcjphuym32n3y4uxl265m.jpg",
+      "maxSupply": 10,
+      "currentSupply": 8
+    },
+    {
+      "id": "nft14",
+      "name": "Sports Memorabilia #1",
+      "category": "Sports",
+      "description": "A digital representation of a historic sports item.",
+      "imageUrl": "https://cdn.nftshowroom.com/bafybeihk3wqorlqvuifdxnqfsleg72wgexqlnyjhoyfqzwf6vb5yjajlv4.jpg",
+      "maxSupply": 10,
+      "currentSupply": 5
+    },
+    {
+      "id": "nft15",
+      "name": "Sports Moment #1",
+      "category": "Sports",
+      "description": "A digital highlight of a famous sports moment.",
+      "imageUrl": "https://cdn.nftshowroom.com/bafkreihi4k5uawzuqe4nsn6dkxi4klm2uf2xkp27ofmtouek4wj2bvrdmm.png",
+      "maxSupply": 20,
+      "currentSupply": 10
+    },
+    {
+      "id": "nft16",
+      "name": "Digital Art Piece #3",
+      "category": "Art",
+      "description": "A futuristic art piece representing the digital age.",
+      "imageUrl": "https://cdn.nftshowroom.com/bafybeigmc7y5sexmxpttrw6zdl6iqgsps7aeum56ggbnnth6l3wzocv3mm.gif",
+      "maxSupply": 12,
+      "currentSupply": 8
+    }
+  ]  
+}
