@@ -11,6 +11,12 @@
   list-style-type: none;
 }
 
+.emptyElements {
+  padding: 50px;
+  margin-top: 50px;
+  border: 3px dashed;
+}
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .nftListContainer {

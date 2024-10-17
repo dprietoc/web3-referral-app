@@ -84,7 +84,7 @@ const NFTList = ({ address, maxMintsCategory = 1 }: NFTListProps) => {
           })}
         </ul>
       ) : (
-        <p>There are no NFTs available for minting.</p>
+        <p className={styles.emptyElements}>There are no NFTs available for minting.</p>
       )}
     </>
   );
