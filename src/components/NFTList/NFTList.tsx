@@ -21,14 +21,15 @@ const NFTList = ({ address, maxMintsCategory = 1 }: NFTListProps) => {
   }, []);
 
   const getNFTs = async () => {
-    const tokens = await getTokens();
+    const tokens: NFT[] = await getTokens();
     setNFTs(tokens);
   };
 
   const checkMintAvailability = (nft: NFT) => {
     const { category, currentSupply, maxSupply } = nft;
-    if (currentSupply === maxSupply) { return false; }
-    if (!userMints[category]) { return true; }
+
+    if (currentSupply === maxSupply) { return false }
+    if (!userMints[category]) { return true }
 
     return userMints[category] < maxMintsCategory;
   };
@@ -45,14 +46,14 @@ const NFTList = ({ address, maxMintsCategory = 1 }: NFTListProps) => {
   };
 
   const updateNFTSupply = (nft: NFT) => {
-    setNFTs((prevNFTs) => 
-      prevNFTs.map((prevNFT) => 
-        prevNFT.id === nft.id 
-          ? { ...prevNFT, currentSupply: prevNFT.currentSupply++ } 
+    setNFTs((prevNFTs) =>
+      prevNFTs.map((prevNFT) =>
+        prevNFT.id === nft.id
+          ? { ...prevNFT, currentSupply: prevNFT.currentSupply++ }
           : prevNFT
       )
     );
-  }
+  };
 
   const updateUserMints = (category: string) => {
     setUserMints((prevMints) => ({
@@ -68,20 +69,22 @@ const NFTList = ({ address, maxMintsCategory = 1 }: NFTListProps) => {
           {nfts.map((nft) => {
             const eligible = checkMintAvailability(nft);
             return (
-              <Card key={nft.id} 
-                imageSrc={nft.imageUrl}
-                title={nft.name}
-                category={nft.category}
-                editions={`${nft.currentSupply}/${nft.maxSupply}`}
-                buttonText={eligible ? "Mint NFT" : "Limit Reached"}
-                onButtonClick={() => onMintPressed(nft)}
-                disabled={!address || !eligible}
-              />
+              <li key={nft.id}>
+                <Card
+                  imageSrc={nft.imageUrl}
+                  title={nft.name}
+                  category={nft.category}
+                  editions={`${nft.currentSupply}/${nft.maxSupply}`}
+                  buttonText={eligible ? "Mint NFT" : "Limit Reached"}
+                  onButtonClick={() => onMintPressed(nft)}
+                  disabled={!address || !eligible}
+                />
+              </li>
             );
           })}
         </ul>
       ) : (
-        <p>No NFTs available to mint.</p>
+        <p>There are no NFTs available for minting.</p>
       )}
     </>
   );
