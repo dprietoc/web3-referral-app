@@ -1,44 +1,63 @@
-# Fuul Frontend Code Challenge
+# Web3 Referral App
 
-Fuul provides an SDK for clients to implement on their React websites. 
 
-To increase the number of referrers, a modal appears right after users convert on the app, encouraging them to refer others and earn commissions.
+**Web3 Referral** es un proyecto demo que permite conectar una wallet, mintear NFTs (solo firmarlos) y referir a otros gracias a una **SDK** local que recupera datos de proyecto según una **apiKey** (consulta más detalles en: [Challenge Kuyen Labs](https://github.com/kuyen-labs/code-challenges/blob/main/Frontend.md)).
 
-## Objective
+### 🚀 Visita la versión deployada
 
-The task is to build an SDK and a website that uses it, where users connect their wallet, mint an NFT and are then shown the modal.
+La aplicación está disponible en línea. ¡Echa un vistazo a cómo funciona!
 
-The objective of the modal is to encourage users to refer others. So it should include the necessary information and tools to convince users to share, including their personalized tracking link.
+<img src="https://s11.gifyu.com/images/SBew4.gif" alt="Funcionalidad Básica" width="500" height="300">
 
-## Deliverables
+#### Puedes acceder a ella aquí: [Web3 Referral App](https://web3-referral.surge.sh).
 
-The code should:
-* Be written in Typescript
-* Be structured using all best-practices you know
-* Be easy to evolve and add new functionality
+<br>
 
-### SDK package
-A stand-alone package that can be imported in any React project (for the purposes of this challenge there is no need to host it anywhere).
+## Instalación local
 
-It should include:
-* An export named `Fuul` which exposes only an `init`  method
-* The `init` method takes an `apiKey` argument that identifies the `project` and calls a mocked API to get the project information from Fuul
+Para iniciar el proyecto, primero necesitas instalar las dependencias. Abre tu terminal y ejecuta:
 
-  
-### Website
-The website will import the SDK package locally (`npm install ./sdk` or whatever directory you decide to put it in)
+```bash
+npm install
+```
+(Esto instalará todas las dependencias, incluida la SDK). 
 
-It should include:
-* A "connect wallet" button (you can use any type of wallet or provider)
-* A dynamic list of NFTs to mint 
-* The mint button should prompt the user to sign a message (not actually minting!) using their wallet
-* After minting (signing the message) the referral modal should be triggered
+Si deseas instalar la SDK por separado, puedes hacerlo con el siguiente comando:
 
-Minting conditions:
-* Each NFT is an [ERC1155](https://docs.openzeppelin.com/contracts/3.x/erc1155), which has a limited number of editions (number of mints)
-* NFTs have different category (Art, Gaming, PFPs, Music)
-* The user cannot mint more than 2 NFTs from the same category
+```bash
+npm install ./sdk
+```
 
-The modal should include:
-* A tracking link identifying the user. Something like `{hostedURL}/?referrer={connectedAddress}` (using the hosted URL from your site and the address that is connected)
-* The project information obtained from the mocked API call
+### Variables de Entorno
+
+Es necesario crear un archivo `.env` en la raíz del proyecto y agregar la siguiente variable de entorno para setear la **apiKey** que define el proyecto configurado:
+
+```bash
+VITE_PROJECT_API_KEY="XXX-XXX-XXX"
+```
+
+Puedes configurarlo con cualquiera de las siguientes **apiKeys** de prueba:
+
+- `123-456-789`
+- `234-567-891`
+- `345-678-912`
+
+## Detalles Mock API
+
+- La **Mock API** se encuentra desplegada con **Cloudflare Workers** (https://workers.cloudflare.com/)
+- La SDK consulta al endpoint **_/project_** y hay otro endpoint **_/tokens_** que resulta conveniente para consultar los NFTs de manera dinámica
+
+## Test
+Para correr la suite de test corre el comando:
+
+```bash
+npm run test
+```
+
+## Contribuciones
+
+Si deseas contribuir al proyecto, siéntete libre de abrir un **issue** o **pull request**. ¡Tu ayuda es bienvenida!
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
