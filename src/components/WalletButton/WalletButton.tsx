@@ -25,6 +25,9 @@ const WalletButton: React.FC = () => {
     const {address, status} = await requestWallet(EthereumMethod.GET_WALLET);
     setAddress(address);
     setWalletStatus(status);
+    if (address) {
+      getProject();
+    }
   };
 
   const connectMyWallet = async () => {
