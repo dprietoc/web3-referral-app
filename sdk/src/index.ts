@@ -1,5 +1,4 @@
 import { Project } from './types';
-import data from './api/mocks/projects.json';
 
 class FuulSDK {
   private static instance: FuulSDK | null = null;
@@ -28,12 +27,23 @@ class FuulSDK {
   }
 
   private async fetchProject(apiKey: string): Promise<Project | null> {
-    // To be replaced for a real API call
-    const project = data.projects.find((project: Project) => project.apiKey === apiKey);
-    if (!project) {
+    try {
+      const response = await fetch(`https://mockapi.dprietoc.workers.dev/api/project?id=${apiKey}`);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const project = await response.json();
+
+      if (!project) {
+        return null;
+      }
+      return project;
+    } catch (error) {
+      console.error('Failed to fetch project:', error);
       return null;
     }
-    return project;
   }
 }
 
